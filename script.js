@@ -91,7 +91,7 @@ const mensajes = [
 
 
 
-  const fechaObjetivo = new Date("2025-06-16T19:00:00").getTime();
+  const fechaObjetivo = new Date("2025-06-16T00:02:00").getTime();
   const cuentaElem = document.getElementById("cuenta");
   const pantallaBloqueo = document.getElementById("pantallaBloqueo");
   const preguntaPersonal = document.getElementById("preguntaPersonal");
