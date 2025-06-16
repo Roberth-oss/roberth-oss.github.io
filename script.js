@@ -90,7 +90,7 @@ const mensajes = [
 
 
 
-  const fechaObjetivo = new Date("2025-06-16T00:02:00").getTime();
+  const fechaObjetivo = new Date("2025-06-16T19:00:00").getTime();
   const cuentaElem = document.getElementById("cuenta");
   const pantallaBloqueo = document.getElementById("pantallaBloqueo");
   const preguntaPersonal = document.getElementById("preguntaPersonal");
@@ -102,7 +102,7 @@ const mensajes = [
     if (diferencia <= 0) {
       clearInterval(intervalo);
       pantallaBloqueo.style.display = "none";
-      preguntaPersonal.style.display = "flex";  // Mostrar pregunta personal
+      preguntaPersonal.style.display = "flex"; 
     } else {
       const horas = Math.floor((diferencia / (1000 * 60 * 60)));
       const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
