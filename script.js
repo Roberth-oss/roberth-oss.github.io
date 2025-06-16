@@ -19,7 +19,7 @@ function crearCorazon() {
     const btnCerrar = document.getElementById("cerrarModal");
     const contenido = document.getElementById("contenidoPagina");
   
-    // Mostrar modal y aplicar blur al cargar
+
     document.body.classList.add("no-scroll");
     contenido.classList.add("blur");
   
@@ -32,18 +32,17 @@ function crearCorazon() {
 
 
 
-//para la musica
+
 
 
 const audios = document.querySelectorAll("audio");
 const contenedores = document.querySelectorAll(".cancion");
 
-// Función para quitar la clase a todos
+
 function limpiarAnimaciones() {
   contenedores.forEach(c => c.classList.remove("reproduciendo"));
 }
 
-// Añadir evento de reproducción a cada audio
 
 audios.forEach(audio => {
   audio.addEventListener("play", function() {
@@ -117,10 +116,10 @@ const mensajes = [
     const respuesta = document.getElementById("nombreInput").value.trim().toLowerCase();
     if(respuesta === "7 cruces") {
       preguntaPersonal.style.display = "none";
-      // Aquí puedes poner un mensaje bonito o animación si quieres
+
       alert("Parece que sabes 💖");
     } else {
-      alert("Mmm no es esa 😏");
+      alert("Haber haber como que no sabes :(");
     }
   }
   
