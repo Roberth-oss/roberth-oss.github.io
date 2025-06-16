@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Ti 💖</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="icon" href="img/favicon.svg" type="image/x-icon">
+</head>
+<body>
+
+  <div id="pantallaBloqueo" style="position:fixed; top:0; left:0; width:100%; height:100%; background:#000; color:#fff; display:flex; flex-direction:column; justify-content:center; align-items:center; z-index:9999;">
+    <h1>Cuenta regresiva para ver la sorpresa 💖</h1>
+    <h2 id="cuenta" style="font-size:3rem; margin-top:20px;"></h2>
+  </div>
+  
+  
+
+
+    <!-- MODAL DE BIENVENIDA -->
+    <div id="miModal" class="modal">
+      <div class="modal-contenido">
+        <h2>Hola, mi amor ❤️</h2>
+        <p>Te hice este pequeño regalo para recordarte cuánto te quiero y lo feliz que soy por haberte encontrado, te amo mucho Italia.</p>
+        <button id="cerrarModal">Ver regalo 🎁</button>
+      </div>
+    </div>
+  
+    <!-- CONTENIDO DE LA PÁGINA -->
+    <div id="contenidoPagina">
+      <h1 class="bienvenida">Te quiero mucho 💕</h1>
+  
+      <section class="galeria" style="position: relative; display: inline-block;">
+        <img src="img/4.jpg" alt="foto bonita" style="display: block; border-radius: 15px;">
+        <div class="emoji-flotante emoji-arriba-derecha">✨</div>
+        <div class="emoji-flotante emoji-abajo-izquierda">💕</div>
+      </section>
+      
+      
+
+      <!-- <section class="musica">
+        
+        <h2>Nuestras canciones 🎶</h2>
+      
+        <div class="cancion" id="cancion1">
+          <p>💖 esta cancion me recuerda mucho a ti</p>
+          <audio controls id="audio1">
+            <source src="musica/The Weeknd, Ariana Grande - Die For You (Remix - Lyric Video)-mc.mp3" type="audio/mpeg">
+            Tu navegador no soporta audio.
+          </audio>
+        </div>
+      
+        <div class="cancion" id="cancion2">
+          <p>🌸 Esta se me quedo grabada en mi mente cuando te vi escucharla</p>
+          <audio controls id="audio2">
+            <source src="musica/Ariana Grande - pov (official audio)-mc.mp3" type="audio/mpeg">
+            Tu navegador no soporta audio.
+          </audio>
+        </div>
+      
+        <div class="cancion" id="cancion3">
+          <p>🌙 Ya se que te gusta the Weeknd, ademas esta es una de mis favoritas :)</p>
+          <audio controls id="audio3">
+            <source src="musica/The Weeknd - Starboy ft. Daft Punk (Official Video)-mc.mp3" type="audio/mpeg">
+            Tu navegador no soporta audio.
+          </audio>
+        </div>
+
+        <div class="cancion" id="cancion4">
+            <p>🌙 Con el nombre de esta cancion estoy en tu Whats jejeje</p>
+            <audio controls id="audio3">
+              <source src="musica/Kjarkas - T´una Papita (Official Video)-mc.mp3" type="audio/mpeg">
+              Tu navegador no soporta audio.
+            </audio>
+          </div>
+
+          <div class="cancion" id="cancion5">
+            <p>🌙 Las canciones de Mon no siempre se dedican, pero cuando lo escuchamos en la oficina uff...</p>
+            <audio controls id="audio3">
+              <source src="musica/Mon Laferte - Mi Buen Amor (Video Oficial) ft. Enrique Bunbury(1)-mc.mp3" type="audio/mpeg">
+              Tu navegador no soporta audio.
+            </audio>
+          </div>
+
+          <div class="cancion" id="cancion6">
+            <p>🌙 La que escuchamos de noche</p>
+            <audio controls id="audio3">
+              <source src="musica/cancion3.mp3" type="audio/mpeg">
+              Tu navegador no soporta audio.
+            </audio>
+          </div>
+      </section> -->
+      <div class="musica">
+        <h2>Estas son las canciones que escuchamos y nos dedicamos 🎶</h2>
+        
+        <div id="mensajeEspecial" class="mensaje-especial">Te amo más que ayer, menos que mañana 💖</div>
+        <div class="iconos-musica">
+          <div>
+            <span>🎵</span>
+            <p>Esta canción me recuerda mucho a los dos</p>
+            <audio controls src="musica/The Weeknd, Ariana Grande - Die For You (Remix - Lyric Video)-mc.mp3"></audio>
+          </div>
+          
+          <div>
+            <span>🌸</span>
+            <p>No se porque, pero esta canción se me quedo cuando te vi escucharla</p>
+            <audio controls src="musica/Ariana Grande - pov (official audio)-mc.mp3"></audio>
+          </div>
+          <div>
+            <span>💝</span>
+            <p>Temazooo</p>
+            <audio controls src="musica/The Weeknd & Ariana Grande - Save Your Tears (Remix) (Official Video)-mc.mp3"></audio>
+          </div>
+          <div>
+            <span>💞</span>
+            <p>Me gusto el nombre de esta musica, por que sera? </p>
+            <audio controls src="musica/Kjarkas - T´una Papita (Official Video)-mc.mp3"></audio>
+          </div>
+          
+        <div>
+            <span>✨</span>
+            <p>Las canciones de Mon no siempre se dedican, pero...</p>
+            <audio controls src="musica/Mon Laferte - Mi Buen Amor (Video Oficial) ft. Enrique Bunbury(1)-mc.mp3"></audio>
+        </div>
+
+        <div>
+            <span>😍</span>
+            <p>Mi coqueta JAJAJA</p>
+            <audio controls src="musica/Grupo Frontera, Fuerza Regida - COQUETA (Letra Oficial)-mc.mp3"></audio>
+        </div>
+    </div>
+</div>
+      <style>
+       .iconos-musica {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.iconos-musica div {
+  text-align: center;
+  color: #ffe0f0;
+  background: #3b2a40cc;
+  padding: 15px;
+  border-radius: 15px;
+  width: 220px;
+  box-shadow: 0 4px 12px rgba(255, 153, 200, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.iconos-musica div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 153, 200, 0.7);
+}
+.iconos-musica span {
+  font-size: 50px;
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.iconos-musica audio {
+  margin-top: 10px;
+  width: 100%;
+  outline: none;
+}
+/* Media query para pantallas más pequeñas */
+@media (max-width: 600px) {
+  .iconos-musica {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+  }
+  .iconos-musica div {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+      </style>
+      
+
+
+
+      
+
+<button id="btnDetalle" class="boton-detalle">Leelo por favorcito 💫</button>
+
+<div id="modal1" class="modal">
+  <div class="modal-contenido" id="contenidoModal1"></div>
+</div>
+
+
+
+<style>
+  .boton-detalle {
+  background-color: #ff6b81;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 20px auto;
+  display: block;
+  max-width: 200px;
+}
+
+.boton-detalle:hover {
+  background-color: #ff4757;
+}
+  
+
+</style>
+    </div>
+
+    <div id="preguntaPersonal" style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgb(0, 0, 0); color:#fff; display:flex; flex-direction:column; justify-content:center; align-items:center; z-index:10000; display:none;">
+      <h2 style="margin-bottom:20px;">Antes de mostrarte la sorpresa… dime, ¿cómo se llama el juego donde todo empezo? 🥰</h2>
+      <input type="text" id="nombreInput" placeholder="Escribe tu nombre" style="padding:10px; border-radius:5px; border:none; font-size:1rem;">
+      <button onclick="continuar()" style="margin-top:20px; padding:10px 20px; font-size:1rem; border:none; border-radius:5px; background:#ff69b4; color:#fff; cursor:pointer;">Continuar</button>
+    </div>
+    <script src="script.js"></script>
+
+
+    
+    
+  </body>
+  
+</html>

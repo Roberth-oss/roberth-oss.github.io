@@ -1,0 +1,307 @@
+body {
+    overflow-x: hidden;
+    background: linear-gradient(to right, #000000, #2b82ca);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .bienvenida {
+    margin-top: 50px;
+    font-size: 3rem;
+    animation: latido 1s infinite;
+  }
+  
+  @keyframes latido {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 50px 0;
+  }
+  
+  .galeria img {
+    width: 250px;
+    border-radius: 15px;
+    transition: transform 0.5s;
+  }
+  
+  .galeria img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #fff;
+  }
+  
+  .musica {
+    margin: 50px 0;
+  }
+  
+  .corazon {
+    position: fixed;
+    top: -30px;
+    font-size: 30px;
+    color: #fff;
+    animation: flotar 4s linear infinite;
+    pointer-events: none;
+  }
+  
+  
+  @keyframes flotar {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+  }
+  
+  .corazon::before {
+    content: "❤️";
+  }
+
+  
+  /* Estilos para el modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-contenido {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    color: #333;
+    box-shadow: 0 0 30px #ff99c8;
+transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .modal-contenido h2 {
+    margin-bottom: 15px;
+  }
+  
+  .modal-contenido p {
+    margin-bottom: 20px;
+  }
+  
+  .modal-contenido button {
+    background: #ff6b81;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .modal-contenido button:hover {
+    background: #ff4757;
+  }
+  
+  .no-scroll {
+    overflow-y: hidden;  /* bloquea scroll vertical */
+    overflow-x: hidden;  /* bloquea scroll horizontal */
+  }
+
+  
+/* Fondo difuminado cuando el modal está activo */
+.blur {
+    filter: blur(5px);
+    transition: all 0.3s ease;
+  }
+  
+  /* Estilo para el modal */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* Animación y formato del modal */
+  .modal-contenido {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    color: #333;
+    animation: zoomIn 0.5s ease;
+  }
+  
+  /* Animación suave de entrada */
+  @keyframes zoomIn {
+    0% { transform: scale(0.7); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+
+
+  /* Para la musica */
+  .musica {
+    margin: 30px;
+    padding: 30px;
+    background: #fff0f6;
+    border-radius: 20px;
+    text-align: center;
+  }
+  
+  .musica h2 {
+    color: #d6336c;
+    margin-bottom: 25px;
+    font-size: 28px;
+  }
+  
+  .cancion {
+    background: #fff;
+    border: 2px solid #ff99c8;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+  }
+  
+  .cancion p {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #d6336c;
+  }
+  
+  .cancion audio {
+    width: 100%;
+  }
+  
+  /* 🎨 Animación cuando suena */
+  .cancion.reproduciendo {
+    background: #ffe0f0;
+    border-color: #ff6f91;
+    box-shadow: 0 0 20px #ff99c8;
+    transform: scale(1.02);
+  }
+  
+  .mensaje-especial {
+    margin: 30px auto;
+    font-size: 1.5rem;
+    color: #000000;
+    font-style: italic;
+    max-width: 400px;
+    transition: opacity 0.5s;
+  }
+
+
+
+  #modal1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+  }
+  
+  #modal1 .modal-contenido {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 500px;
+    color: #333;
+    overflow-y: auto;
+    max-height: 90vh;
+    animation: zoomIn 0.5s ease;
+  }
+  
+  @keyframes zoomIn {
+    0% { transform: scale(0.7); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+
+
+  .emoji-flotante {
+    position: absolute; /* o absolute si lo pones dentro de un contenedor relative */
+    font-size: 30px;
+    color: #fff;
+    animation: flotar 4s ease-in-out infinite;
+    user-select: none; /* para que no se seleccionen al arrastrar */
+    pointer-events: none; /* para que no interfieran con clicks */
+    z-index: 9999;
+  }
+  
+  .emoji-flotante {
+    position: fixed;
+    font-size: 2rem;
+    pointer-events: none;
+    user-select: none;
+    color: #fff;
+    z-index: 10000;
+  }
+  
+  .emoji-arriba-derecha {
+    top: 1px;
+    right: 400px;
+  }
+  
+  .emoji-abajo-izquierda {
+    bottom: 800px;
+    left: 400px;
+  }
+  
+  
+
+
+  #pantallaBloqueo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0c0c0c;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    text-align: center;
+  }
+  
+  #contador h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  #cuenta {
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 20px 40px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 20px #ff6b81;
+    text-shadow: 0 0 10px #ff6b81, 0 0 20px #ff4757;
+  }
+  
+  
+  
